@@ -68,8 +68,9 @@ align-self: flex-start;
 }
 
 .star-review-item{
+    font-size: smaller;
     color: var(--dark-magenta);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .text-review{
@@ -78,6 +79,12 @@ align-self: flex-start;
     padding: 20px;
     margin:0 auto 20px auto;
     border-radius: 5px;
+}
+
+.name-buyer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .name{
@@ -182,6 +189,7 @@ align-self: flex-start;
 
     .star-review-item{
         display: inline;
+        margin-left: 15px;
     }
 
     .buyers-review{
@@ -189,6 +197,7 @@ align-self: flex-start;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 80px;
     }
+
 
     .text-review{
         width: 100%;
