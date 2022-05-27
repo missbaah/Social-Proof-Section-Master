@@ -7,12 +7,16 @@
     --font-size: 15px;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 html, body{
-    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
-    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     font-family: 'League Spartan', sans-serif;
+    background-position: left top, bottom right;
+    background-repeat: no-repeat;
 }
 
 .container{
@@ -92,21 +96,42 @@ align-self: flex-start;
     line-height: 1.6;
 }
 
+.attribution{
+    display: block;
+    margin: 30px;
+    text-align: center;
+}
 
-@media (min-width:780px){
+@media (max-width:780px) {
+    
+    body{
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    }
+    
+}
+
+
+@media (min-width:781px){
 
     body{
         background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
-        background-repeat: no-repeat;
+    }
+
+    .container{
+        padding: 10px;
     }
 
     .top-container{
         display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 10px;
     }
 
     .intro-note{
         text-align: justify;
-        width: 50%;
+        padding-left: 15px;
+        margin-bottom: 50px;
     }
 
     h1{
@@ -114,39 +139,73 @@ align-self: flex-start;
         color: var(--dark-magenta);
         font-weight: 700;
         font-size: 50px;
-        /* width: 70%; */
+        width: 345px;
     }
     
     .service-slogan{
         text-align: justify;
         color: var(--dark-greyish-magenta);
         line-height: 1.6;
-        
+        margin-top: -30px;
+        width: 380px;
+    }
+
+    .short-reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .star-review{
-
         background-color: var(--light-greyish-magenta);
-        text-align: justify;
+        /* text-align: justify; */
         border-radius: 5px;
-        padding: 15px 40px;
-        margin:0 auto 20px auto;
-        width: auto;
+        padding: 15px 10px;
+        /* margin:0 auto 20px auto; */
+        width: 350px;
     }
 
     .stars{
     display: inline;
     }
 
+    .star1{
+        margin-left: 0px;
+    }
     .star2{
-        margin-left: 20px;
+        margin-left: 45px;
+    }
+    .star3{
+        margin-left: 90px;
     }
 
     .star-review-item{
         display: inline;
     }
+
     .buyers-review{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 80px;
+    }
+
+    .text-review{
+        width: 100%;
+        background-color:var(--dark-magenta);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    
+    .Two{
+        position: relative;
+        top: 20px;
+    }
+
+    .Three{
+        position: relative;
+        top: 40px;
     }
 }
+    
